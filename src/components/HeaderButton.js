@@ -1,7 +1,14 @@
-function HeaderButton() {
+import classNames from "classnames";
+
+function HeaderButton({ outline }) {
   return (
     <div className="header__cart">
-      <a href="/cart.html" className="button button--cart">
+      <a
+        href="/cart.html"
+        className={classNames("button", {
+          "button--cart": outline,
+        })}
+      >
         <span>520 ₽</span>
         <div className="button__delimiter"></div>
         <svg

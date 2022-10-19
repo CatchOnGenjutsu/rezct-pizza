@@ -12,7 +12,7 @@ function Header() {
             <p>самая вкусная пицца во вселенной</p>
           </div>
         </div>
-        <HeaderButton />
+        <HeaderButton outline />
       </div>
     </div>
   );
