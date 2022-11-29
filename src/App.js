@@ -1,39 +1,18 @@
 import "./App.css";
 
-import { PizzaBlock, Header, Categories, SortPopup } from "./components";
+import { Header } from "./components";
+import { Home, Cart } from "./pages";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
-        <div className="container">
-          <div className="content__top">
-            <Categories
-              // onClick={(item) => console.log(item)}
-              items={[
-                "Мясные",
-                "Вегетарианская",
-                "Гриль",
-                "Острые",
-                "Закрытые",
-              ]}
-            />
-            <SortPopup />
-          </div>
-          <h2 className="content__title">Все пиццы</h2>
-          <div className="content__items">
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-          </div>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </div>
     </div>
   );
